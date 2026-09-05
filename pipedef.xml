@@ -1,0 +1,78 @@
+<!-----------------------------------------------------------------------
+    pipedef.xml - Pipe (throttle) definitions
+
+    Written: 99/08/23   Xitami team xitami@imatix.com
+    Revised: 99/12/07   Xitami team xitami@imatix.com
+
+    How to use this file:
+
+    The XML structure is:
+        DATA 
+          PIPE
+            INSTANCE
+
+    The pipe definition is applied to zero or more 'instances', which
+    are the throttle pipes that the application can use.  A pipe with
+    no instances is not used.
+    
+    PIPE has these attributes:
+        NAME       Name of pipe
+        RATE       Input/output rate, bytes per second           
+        OUTRATE    Output rate, specified seperately
+        INRATE     Input rate, specified seperately
+        UNITS      Rate multiplication factor (1)
+    INSTANCE has these attributes:
+        NAME       Instance name
+    --------------------------------------------------------------------->
+<DATA>
+
+<PIPE NAME = "1k"    RATE = "1"     UNITS = "1024" >
+    <INSTANCE NAME = "1k pipe" />
+</PIPE>
+<PIPE NAME = "2k"    RATE = "2"     UNITS = "1024" >
+    <INSTANCE NAME = "2k pipe" />
+</PIPE>
+<PIPE NAME = "4k"    RATE = "4"     UNITS = "1024" >
+    <INSTANCE NAME = "4k pipe" />
+</PIPE>
+<PIPE NAME = "8k"    RATE = "8"     UNITS = "1024" >
+    <INSTANCE NAME = "8k pipe" />
+</PIPE>
+<PIPE NAME = "16k"   RATE = "16"    UNITS = "1024" >
+    <INSTANCE NAME = "16k pipe" />
+</PIPE>
+<PIPE NAME = "32k"   RATE = "32"    UNITS = "1024" >
+    <INSTANCE NAME = "32k pipe A" />
+    <INSTANCE NAME = "32k pipe B" />
+</PIPE>
+<PIPE NAME = "64k"   RATE = "64"    UNITS = "1024" >
+    <INSTANCE NAME = "64k pipe A" />
+    <INSTANCE NAME = "64k pipe B" />
+</PIPE>
+<PIPE NAME = "128k" RATE = "128"  UNITS = "1024" >
+    <INSTANCE NAME = "128k pipe A" />
+    <INSTANCE NAME = "128k pipe B" />
+</PIPE>
+<PIPE NAME = "256k" RATE = "256"  UNITS = "1024" >
+    <INSTANCE NAME = "256k pipe A" />
+    <INSTANCE NAME = "256k pipe B" />
+</PIPE>
+<PIPE NAME = "512k" RATE = "512"  UNITS = "1024" >
+    <INSTANCE NAME = "512k pipe A" />
+    <INSTANCE NAME = "512k pipe B" />
+</PIPE>
+<PIPE NAME = "1M"   RATE = "1024" UNITS = "1024" >
+    <INSTANCE NAME = "1M pipe A" />
+</PIPE>
+<PIPE NAME = "2M"   RATE = "2048" UNITS = "1024" >
+    <INSTANCE NAME = "2M pipe A" />
+</PIPE>
+<PIPE NAME = "4M"   RATE = "4096" UNITS = "1024" />
+<PIPE NAME = "8M"   RATE = "8192" UNITS = "1024" />
+
+<PIPE NAME = "ADSL" INRATE = "256" OUTRATE = "64" UNITS = "1024" >
+    <INSTANCE NAME = "ADSL pipe A" />
+    <INSTANCE NAME = "ADSL pipe B" />
+</PIPE>
+
+</DATA>

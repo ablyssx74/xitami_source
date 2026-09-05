@@ -1,0 +1,21 @@
+<HTML><TITLE>Pipe Definitions</TITLE>
+<BODY>
+<H1>Xitami Transfer Pipes</H1>
+.for pipe
+<H3>$(Name)</H3>
+<UL>
+.define inrate_kb  = $(inrate?$(rate))  * $(units?1) / 1024
+.define outrate_kb = $(outrate?$(rate)) * $(units?1) / 1024
+<LI>Input rate: $(inrate_kb) Kbytes/sec
+<LI>Output rate: $(outrate_kb) Kbytes/sec
+.if count (instance) > 0
+<LI>Instances:
+.  for instance
+$(name)
+.  endfor
+.else
+<LI>Has no instances.
+.endif
+</UL>
+.endfor
+</BODY></HTML>

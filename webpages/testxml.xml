@@ -1,0 +1,40 @@
+<data schema = "testxml.gsl" >
+
+<pipe name = "4K"    rate = "4"     units = "1024" />
+<pipe name = "8K"    rate = "8"     units = "1024" />
+<pipe name = "16K"   rate = "16"    units = "1024" />
+<pipe name = "32K"   rate = "32"    units = "1024"  >
+    <instance name = "32K pipe a" />
+    <instance name = "32K pipe b" />
+</pipe>
+<pipe name = "64K"   rate = "64"    units = "1024"  >
+    <instance name = "64K pipe a" />
+    <instance name = "64K pipe b" />
+</pipe>
+<pipe name = "128K"  rate = "128"   units = "1024"  >
+    <instance name = "128K pipe a" />
+    <instance name = "128K pipe b" />
+</pipe>
+<pipe name = "256K"  rate = "256"   units = "1024"  >
+    <instance name = "256K pipe a" />
+    <instance name = "256K pipe b" />
+</pipe>
+<pipe name = "512K"  rate = "512"   units = "1024"  >
+    <instance name = "512K pipe a" />
+    <instance name = "512K pipe b" />
+</pipe>
+<pipe name = "1M"    rate = "1024"  units = "1024"  >
+    <instance name = "1M pipe a" />
+</pipe>
+<pipe name = "2M"    rate = "2048"  units = "1024"  >
+    <instance name = "2M pipe a" />
+</pipe>
+<pipe name = "4M"    rate = "4096"  units = "1024" />
+<pipe name = "8M"    rate = "8192"  units = "1024" />
+
+<pipe name = "ADSL"  inrate = "256"  outrate = "64" units = "1024"  >
+    <instance name = "ADSL pipe a" />
+    <instance name = "ASDL pipe b" />
+</pipe>
+
+</data>
